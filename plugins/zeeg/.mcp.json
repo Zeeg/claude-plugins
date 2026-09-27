@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "zeeg": {
+      "type": "http",
+      "url": "https://api.zeeg.me/mcp"
+    }
+  }
+}

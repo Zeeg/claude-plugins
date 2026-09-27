@@ -1,0 +1,24 @@
+{
+  "name": "zeeg-plugins",
+  "description": "Official Zeeg plugins for Claude Code",
+  "owner": {
+    "name": "Zeeg GmbH",
+    "email": "support@zeeg.me",
+    "url": "https://zeeg.me"
+  },
+  "plugins": [
+    {
+      "name": "zeeg",
+      "source": "./plugins/zeeg",
+      "description": "Work with your Zeeg scheduling, CRM and AI phone agents from Claude: book and move meetings, keep CRM records clean, and review voice agent calls. Connects to the Zeeg MCP server, hosted in Germany.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Zeeg GmbH",
+        "url": "https://zeeg.me"
+      },
+      "category": "productivity",
+      "homepage": "https://developer.zeeg.me/mcp-server",
+      "keywords": ["scheduling", "calendar", "crm", "booking", "voice-agents", "zeeg"]
+    }
+  ]
+}
