@@ -1,6 +1,6 @@
 {
   "name": "zeeg",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Work with your Zeeg scheduling, CRM and AI phone agents from Claude: book and move meetings, keep CRM records clean, and review voice agent calls. Connects to the Zeeg MCP server, hosted in Germany.",
   "author": { "name": "Zeeg GmbH", "url": "https://zeeg.me" },
   "homepage": "https://developer.zeeg.me/mcp-server",
