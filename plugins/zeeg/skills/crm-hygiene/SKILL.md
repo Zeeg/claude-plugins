@@ -10,12 +10,13 @@ The Zeeg CRM holds people, companies and custom-object records. Bookings and rou
 ## Find the problem records
 
 - `search_crm` with `objectType` (`person`, `company` or a custom object slug) and a `query`. Page with `page` while `pagination.hasMore` is true.
-- `get_crm_record` for one record's attributes, its company, and (for a company) its people.
+- `get_crm_record` for one record's attributes, its company, its owner, every custom field the workspace defines (`customFields`, with the current values in `untrustedContent.customAttributes`), and (for a company) its people. Read it before changing a record.
 - `list_bookings` with `inviteeEmail` and `list_form_submissions` show where a person came from.
 
 ## Fix them
 
-- `upsert_crm_record` matches people by email and companies by domain. It updates a match and creates a record only when nothing matches. Send only the fields you want to change: fields you leave out are kept.
+- `upsert_crm_record` with `id` from `search_crm` updates that record and never creates one; it is the only way to update a person without an email, such as a caller booked by phone. Without `id` it matches people by email and companies by domain, updates a match and creates a record only when nothing matches. Send only the fields you want to change: fields you leave out are kept.
+- Set the responsible team member with `contactOwnerMemberId` on a person or `accountOwnerMemberId` on a company, a member `id` from `get_me`; `null` clears it.
 - Zeeg has no merge or delete tool. For true duplicates, update the record you keep with the combined facts and tell the user which record to delete in the dashboard (each result carries its `url`).
 - Link a person to a company by setting the company on the person.
 
