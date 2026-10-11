@@ -22,7 +22,7 @@ Zeeg calls a bookable meeting template an **event type** (the dashboard says "sc
 - Cancel: confirm first, then `cancel_booking` with a short reason the invitee will see.
 - Hand over a round-robin booking: `hand_over_booking` with `newHostId` from `get_me` members.
 - Invitee did not turn up: once the booking has started, `set_invitee_no_show` with the invitee's `uuid` from `get_booking` and `noShow: true`; `noShow: false` undoes a mistaken marking.
-- Notes: `list_notes`, `add_note` (write it in Markdown), `update_note` to correct one instead of adding a duplicate, `delete_note` after the user confirms.
+- Notes: `list_notes` (reads notes back as Markdown, which `update_note` accepts unchanged), `add_note` (write it in Markdown), `update_note` to correct one instead of adding a duplicate, `delete_note` after the user confirms.
 
 ## Rules
 
