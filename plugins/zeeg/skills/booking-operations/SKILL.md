@@ -34,3 +34,5 @@ Zeeg calls a bookable meeting template an **event type** (the dashboard says "sc
 ## Without MCP
 
 The `zeeg` CLI covers the same actions: `zeeg availability <eventTypeUuid>`, `zeeg bookings list|get|create|cancel|reschedule|hand-over|no-show`, `zeeg notes list|add`. Add `--json` for machine-readable output. Commands that reach invitees ask for confirmation; `--yes` skips it and should only be passed after the user agreed.
+
+A team member can book, reschedule or hand over outside availability with the MCP tools' `overrideLevel` or the CLI's `--override-level` (2 also outside working hours, 3 also over calendar entries, 4 also over the host's other bookings, which double-books the host). Use it only when the user asked for it.
