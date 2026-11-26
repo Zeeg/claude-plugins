@@ -9,9 +9,9 @@ The Zeeg CRM holds people, companies and custom-object records. Bookings and rou
 
 ## Find the problem records
 
-- `search_crm` with `objectType` (`person`, `company` or a custom object slug) and a `query`. Page with `page` while `pagination.hasMore` is true.
+- `search_crm` with `objectType` (`person`, `company` or a custom object slug) and a `query`. Page with `page` while `pagination.hasMore` is true. Pass `detail: true` to get each hit as `get_crm_record` returns it (20 per page at most), so a page needs no follow-up calls.
 - `get_crm_record` for one record's attributes, its company, its owner, every custom field the workspace defines (`customFields`, with the current values in `untrustedContent.customAttributes`), and (for a company) its people. Read it before changing a record.
-- `list_bookings` with `inviteeEmail` and `list_form_submissions` show where a person came from.
+- `list_bookings` with `inviteeEmail` (one full email address; put a name or part of an address in `keyword`) and `list_form_submissions` show where a person came from.
 
 ## Fix them
 
